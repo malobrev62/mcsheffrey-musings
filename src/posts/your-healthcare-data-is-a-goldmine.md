@@ -4,6 +4,13 @@ date: 2024-11-22
 topics:
   - healthcare
   - patientoutcomes
+description: How can we better leverage data for the future using modern
+  technologies such as machine learning (ML) or artificial intelligence (AI)?
+  This is a common challenge I encounter in conversations with these startups,
+  as well as their uncertainty about how to fully take advantage of their data
+  for the future. Even startups that are only a few years old are sitting on an
+  astonishing number of data points that hold the key to providing the foresight
+  necessary for making significantly improved decisions.
 ---
 How can we better leverage data for the future using modern technologies such as machine learning (ML) or artificial intelligence (AI)? This is a common challenge I encounter in conversations with these startups, as well as their uncertainty about how to fully take advantage of their data for the future. Even startups that are only a few years old are sitting on an astonishing number of data points that hold the key to providing the foresight necessary for making significantly improved decisions. These companies can utilize their past data to gain insights, drive business decisions, and iterate on their products - this is normally called descriptive analytics. But how can they harness this same data to predict future outcomes? Modern data analytics that uses machine learning and artificial intelligence can help these companies leap ahead of their competitors.
 
