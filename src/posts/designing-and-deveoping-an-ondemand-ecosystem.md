@@ -29,37 +29,27 @@ To build a thriving on-demand ecosystem, you must identify and cater to various 
 
 ### **User Flows**
 
-1. Rider Flow:
+Rider Flow:
 
-\- The rider opens the Uber app and sets their destination.
+* The rider opens the Uber app and sets their destination.
+* The app displays available nearby drivers and estimated wait times.
+* The rider selects a driver, confirms the request, and waits for the driver to arrive.
+* The driver arrives, the rider gets in, and the app tracks the ride in real-time.
+* After reaching the destination, the rider pays through the app and can rate the driver.
 
-\- The app displays available nearby drivers and estimated wait times.
+Driver Flow:
 
-\- The rider selects a driver, confirms the request, and waits for the driver to arrive.
-
-\- The driver arrives, the rider gets in, and the app tracks the ride in real-time.
-
-\- After reaching the destination, the rider pays through the app and can rate the driver.
-
-2. Driver Flow:
-
-\- The driver logs in to the Uber driver app and marks themselves as available.
-
-\- They receive ride requests with details of the rider's pick-up and drop-off locations.
-
-\- The driver can accept or decline requests.
-
-\- Once accepted, they navigate to the pick-up location, pick up the rider, and navigate to the drop-off location.
-
-\- After completing the ride, the driver receives payment through the app.
+* The driver logs in to the Uber driver app and marks themselves as available.
+* They receive ride requests with details of the rider's pick-up and drop-off locations.
+* The driver can accept or decline requests.
+* Once accepted, they navigate to the pick-up location, pick up the rider, and navigate to the drop-off location.
+* After completing the ride, the driver receives payment through the app.
 
 3. Administrator Flow:
 
-\- Administrators monitor the platform for safety and compliance.
-
-\- They handle rider and driver support requests, like resolving disputes or issues.
-
-\- Administrators use analytics to optimize the platform, improve efficiency, and enhance user experiences.
+* Administrators monitor the platform for safety and compliance.
+* They handle rider and driver support requests, like resolving disputes or issues.
+* Administrators use analytics to optimize the platform, improve efficiency, and enhance user experiences.
 
 ### **Key Features**
 
