@@ -3,6 +3,12 @@ title: The Components of a Product Strategy
 date: 2023-11-22
 topics:
   - productstrategy
+description: >-
+  Every product strategy will have three major components regardless of the
+  industry or type of product. There may be other small components, but those
+  will differ according to each industry, company, and product type.
+
+  The following are three things you should always be clear on in order to develop a successful product strategy.
 ---
 Every product strategy will have three major components regardless of the industry or type of product. There may be other small components, but those will differ according to each industry, company, and product type.
 The following are three things you should always be clear on in order to develop a successful product strategy.
