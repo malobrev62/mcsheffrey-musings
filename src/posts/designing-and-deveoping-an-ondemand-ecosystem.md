@@ -11,7 +11,7 @@ description: >-
 
   The on-demand economy has revolutionized the way we access services, and companies like Uber have set the standard for designing and developing successful on-demand ecosystems. In this blog post, we'll explore the key elements of creating an on-demand ecosystem and provide examples of user types, flows, features, and integrations that make it all work seamlessly.
 ---
-![]()
+![](/images/uploads/ondemand.png)
 
 ### **Introduction**
 
