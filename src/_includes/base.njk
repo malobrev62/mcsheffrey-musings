@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if title and title != "McSheffrey Musings" %}{{ title }} · {% endif %}McSheffrey Musings</title>
+<meta name="description" content="{{ description or 'Notes from Orange County, by way of Coleraine. Writing by Niall McSheffrey.' }}">
+<meta property="og:title" content="{{ title or 'McSheffrey Musings' }}">
+<meta property="og:image" content="https://niallmcsheffrey.com/images/header.jpg">
+<link rel="alternate" type="application/atom+xml" href="/feed.xml" title="McSheffrey Musings">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+<header class="mast">
+  <img class="photo" src="/images/header.jpg" alt="Green fields running down to a rocky bay on the north coast, with a headland on the horizon">
+  <div class="mast-inner">
+    <p class="tag">Notes from Orange County, by way of Coleraine</p>
+    <a class="home" href="/"><h1><span class="mc">Mc</span>Sheffrey Musings</h1></a>
+    <nav>
+      <a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>All posts</a>
+      <a href="/about/" {% if page.url == "/about/" %}aria-current="page"{% endif %}>About</a>
+    </nav>
+  </div>
+</header>
+<main>
+{{ content | safe }}
+</main>
+<footer>© {{ "" | year }} McSheffrey Musings</footer>
+<script>
+  // Sends you to the editor after accepting an invite or logging in.
+  if (window.netlifyIdentity) {
+    netlifyIdentity.on("init", user => {
+      if (!user) netlifyIdentity.on("login", () => { document.location.href = "/admin/"; });
+    });
+  }
+</script>
+</body>
+</html>

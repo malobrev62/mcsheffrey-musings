@@ -1,0 +1,12 @@
+---
+layout: base.njk
+---
+<article>
+  <header>
+    <a class="back" href="/">← All posts</a>
+    <h1>{{ title }}</h1>
+    <div class="meta">{{ date | niceDate }} · {{ content | readMins }} min read</div>
+    {% set tl = topics | cleanTags %}{% if tl.length %}<div class="tags" style="margin-top:12px">{% for t in tl %}<a class="chip" href="/?tag={{ t | urlencode }}">{{ t }}</a>{% endfor %}</div>{% endif %}
+  </header>
+  <div class="prose">{{ content | safe }}</div>
+</article>

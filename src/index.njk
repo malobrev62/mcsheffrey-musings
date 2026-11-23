@@ -1,0 +1,45 @@
+---
+layout: base.njk
+title: McSheffrey Musings
+---
+<div class="toolbar"><div class="tags" id="tags"></div></div>
+{% if collections.posts.length %}
+<ul class="ledger" id="ledger">
+{% for p in collections.posts %}{% set tl = p.data.topics | cleanTags %}
+  <li data-tags="{{ tl | join('|') }}"><a class="entry" href="{{ p.url }}">
+    <div class="meta">{{ p.date | niceDate }}<br>{{ p.content | readMins }} min read</div>
+    <div>
+      <h2>{{ p.data.title }}</h2>
+      <p>{{ p.data.description or (p.content | excerpt) }}</p>
+      {% if tl.length %}<div class="row">{% for t in tl %}<span class="chip">{{ t }}</span>{% endfor %}</div>{% endif %}
+    </div>
+  </a></li>
+{% endfor %}
+</ul>
+<p class="empty" id="none" hidden>No posts with that tag yet.</p>
+{% else %}
+<p class="empty">The first post is on its way.</p>
+{% endif %}
+<script>
+(() => {
+  const items = [...document.querySelectorAll("#ledger li")];
+  const all = [...new Set(items.flatMap(li => li.dataset.tags ? li.dataset.tags.split("|") : []))].sort();
+  const box = document.getElementById("tags");
+  if (!all.length) return;
+  let cur = new URLSearchParams(location.search).get("tag");
+  const draw = () => {
+    box.innerHTML = "";
+    [""].concat(all).forEach(t => {
+      const b = document.createElement("button");
+      b.className = "chip" + ((cur || "") === t ? " on" : "");
+      b.textContent = t || "All";
+      b.onclick = () => { cur = t || null; history.replaceState(null, "", cur ? "?tag=" + encodeURIComponent(cur) : "/"); draw(); };
+      box.appendChild(b);
+    });
+    let shown = 0;
+    items.forEach(li => { const ok = !cur || li.dataset.tags.split("|").includes(cur); li.hidden = !ok; if (ok) shown++; });
+    document.getElementById("none").hidden = shown > 0;
+  };
+  draw();
+})();
+</script>
